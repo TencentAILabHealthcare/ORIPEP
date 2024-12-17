@@ -39,7 +39,7 @@ ORIPEP is a toolkit for de novo peptide generation, mutation optimization, and p
 
 5. **Download Model Weights**:
 
-   Download the `model_weights.zip` file and extract it to the `ORIPEP/model_weights` directory. The model_weights.zip is available on Zenodo:
+   Download the `model_weights.zip` file and extract it to the `ORIPEP/model_weights` directory. The model_weights.zip is available on Zenodo: <https://doi.org/10.5281/zenodo.14500068>
 
    After extraction, the `ORIPEP/model_weights` directory should contain the following:
 
@@ -53,7 +53,7 @@ ORIPEP is a toolkit for de novo peptide generation, mutation optimization, and p
    
 6. **Download Receptor Data**:
 
-   Download the `receptor_data.zip` file and extract it to the `ORIPEP/PepAF` directory, specifically to `ORIPEP/PepAF/receptor_data`. The receptor_data.zip is available on Zenodo:
+   Download the `receptor_data.zip` file and extract it to the `ORIPEP/PepAF` directory, specifically to `ORIPEP/PepAF/receptor_data`. The receptor_data.zip is available on Zenodo: <https://doi.org/10.5281/zenodo.14500068>
 
    After extraction, the `ORIPEP/PepAF/receptor_data` directory should contain the following:
 

@@ -1,8 +1,8 @@
-```markdown
+
 # ORIPEP
 
 ORIPEP is a toolkit for de novo peptide generation, mutation optimization, and protein-peptide affinity prediction. This project includes multiple modules for different tasks.
-```
+
 
 ## Installation and Setup
 

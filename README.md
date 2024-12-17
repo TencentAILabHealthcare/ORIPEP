@@ -92,19 +92,78 @@ ORIPEP is a toolkit for de novo peptide generation, mutation optimization, and p
 
    1. **Run PepGPT generation**
    - Select option 1 will initiate the PepGPT model to generate diverse peptide sequences for a specific target protein. This model leverages language modeling techniques to produce peptide sequences with potential biological activity. If you want to specify parameters such as the input protein sequence, please refer to Further instructions 1.
+   ```
+   Enter your choice (1-5): 1
+   Running command: cd PepGPT && python sample.py
+   INFO - Starting peptide generation process...
+   INFO - Initializing PeptideGenerator...
+   INFO - Generating valid peptide sequences...
+   INFO - Generating text with prompt: <aligned><protein>MKEQDSEEELIEAFKVFDRDGNGLISAAELRHVMTNLGEKLTDDEVDEMIREADIDGDGHINYEEFVRMMVSK<peptide>
+   INFO - Generating sequences...
+   INFO - Total valid peptides generated: 63
+   INFO - Generated Peptide Sequences: ['S P A K R K Q A T G H D K E V I Q R A Y R R Y L I L V K K N K R H K V F E P K T E R L H H K', 'Q E E V S A I Q R A Y R R Y L K Q K V K K', 'K R K Q E E V S A I V I Q R A Y R R Y L L K Q K V K K'...]
+   ```
 
    2. **Run PepRL optimization**
    - Select option 2 will start the Reinforcement Learning (RL) optimization process. This process will optimize the given peptide sequence targeting a specific protein (pdb id) to search better mutated sequences with higher affinity. If you want to specify parameters such as the target protein and the initial peptide sequence, please refer to Further instructions 2.
+   ```
+   Enter your choice (1-5): 2
+   Running command: cd PepRL && sh run.sh
+   Target PDB: 7lll_R, Start sequence: QDEEGLLLMQSLEMS
+   The current date and time is ...
+   ################## model loaded on cuda #####################
+   ######### 1-th Play ###########
+   Mutated seq QDEEGLLLFQSLEMS
+   Mutated seq QDEEGLCLFQSLEMS
+   Mutated seq QWEEGLCLFQSLEMS
+   Mutated seq QWEEGLCLFQHLEMS
+   Mutated seq QWQEGLCLFQHLEMS
+   ######### 2-th Play ###########
+   Mutated seq QLEEGLCLFQHLEMS
+   ...
+   Output directory: 
+   ./results/7lll_R/QDEEGLLLMQSLEMS
+   ```
 
    3. **Run single prediction in PepAF**
    - Selection option 3 allows you to perform a binding affinity for a given protein and a peptide. If you want to specify parameters such as the target protein and the peptide sequence, please refer to Further instructions 3.
+   ```
+   Enter your choice (1-5): 3
+   Running command: cd PepAF && python predict.py --task single
+   Starting prediction for protein: 3dab_G, peptide: TSFAEYWNLLSP
+   Dataset created.
+   Models loaded successfully.
+   Predicted binding affinity between 3dab_G and TSFAEYWNLLSP: 7.570078659057617
+   ```
 
    4. **Run batch prediction in PepAF**
    - Selection option 4 allows you to conduct batch predictions for multiple peptide sequences. This is particularly useful when you need to asess a large number of peptide sequences simultaneously. If you want to specify parameters such as the target protein and the peptide sequences, please refer to Further instructions 4.
-
+   ```
+   Enter your choice (1-5): 4
+   Running command: cd PepAF/utils/preprocess && sh start.sh
+   Starting the process...
+   Creating DataFrame...
+   DataFrame created successfully.
+   Adding SMILES data...
+   Converting peptide TSV to JSON...
+   Converting peptides to FASTA format...
+   Creating directory for IDs...
+   Changing directory to ../iupred...
+   Calculating matrix...
+   Merging results...
+   Merging completed successfully.
+   Extracting peptide embeddings...
+   Extracting protein embeddings...
+   Process completed successfully.
+   Running command: cd PepAF && python predict.py --task batch
+   Results have been saved in PepAF/output/batch.tsv
+   ```
    5. **Exit:**
    - Choosing this option will exit the script and terminate the current session.
-
+   ```
+   Enter your choice (1-5): 5
+   Exiting the script.
+   ```
    Simply enter the corresponding number to execute your desired task.
 
 ---

@@ -78,6 +78,17 @@ ORIPEP is a toolkit for de novo peptide generation, mutation optimization, and p
       python run_oripep.py
       ```
    This will present you with a menu to select from the following options:
+   ```
+   Welcome to the ORIPEP automation script!
+
+   Please choose an option:
+   1. Run PepGPT generation
+   2. Run PepRL optimization
+   3. Run single prediction in PepAF
+   4. Run batch prediction in PepAF
+   5. Exit
+   Enter your choice (1-5):
+   ```
 
    1. **Run PepGPT generation**
    - Select option 1 will initiate the PepGPT model to generate diverse peptide sequences for a specific target protein. This model leverages language modeling techniques to produce peptide sequences with potential biological activity. If you want to specify parameters such as the input protein sequence, please refer to Further instructions 1.
